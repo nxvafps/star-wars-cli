@@ -60,12 +60,12 @@ async function showMainMenu() {
 async function showFilmDetails(film) {
   console.clear();
   console.log(chalk.yellow(`\n=== ${film.title} ===\n`));
-
+  console.log(chalk.yellowBright(`${film.opening_crawl}\n`));
   displayAsTable(film, [
     { header: "Episode", key: "episode_id" },
     { header: "Director", key: "director" },
     { header: "Release Date", key: "release_date" },
-    { header: "Opening Crawl", key: "opening_crawl" },
+    //{ header: "Opening Crawl", key: "opening_crawl" },
   ]);
 
   const { action } = await inquirer.prompt([
